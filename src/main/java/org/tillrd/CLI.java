@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.Scanner;
 
 public class CLI {
+    private static String apiKey = "";
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String command;
@@ -33,7 +35,7 @@ public class CLI {
             System.out.println("9. Get Certificate Info");
             System.out.println("10. Help");
             System.out.println("11. Exit");
-            System.out.println("\nEnter your choice (1-11): ");
+            System.out.print("\nEnter your choice (1-11): ");
             command = scanner.nextLine().trim();
 
             switch (command) {
@@ -86,18 +88,23 @@ public class CLI {
     }
 
     private static void exportCertificate() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter alias for the certificate: ");
+        System.out.print("Enter alias for the certificate: ");
         String alias = scanner.nextLine().trim();
 
-        System.out.println("Enter password for the keystore: ");
+        System.out.print("Enter password for the keystore: ");
         String password = scanner.nextLine().trim();
 
-        System.out.println("Enter path for the keystore file: ");
+        System.out.print("Enter path for the keystore file (e.g., /path/to/keystore.jks): ");
         String keystorePath = scanner.nextLine().trim();
 
-        System.out.println("Enter path to export the certificate to: ");
+        System.out.print("Enter path to export the certificate to (e.g., /path/to/exported_certificate.crt): ");
         String certPath = scanner.nextLine().trim();
 
         try {
@@ -109,9 +116,14 @@ public class CLI {
     }
 
     private static void uploadCertificate() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter path to the certificate file: ");
+        System.out.print("Enter path to the certificate file (e.g., /path/to/certificate.crt): ");
         String certPath = scanner.nextLine().trim();
 
         try {
@@ -125,14 +137,19 @@ public class CLI {
     private static void enterApiKey() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter your API key: ");
-        String apiKey = scanner.nextLine().trim();
+        System.out.print("Enter your API key: ");
+        apiKey = scanner.nextLine().trim();
 
         VaultNAPI.setApiKey(apiKey);
         System.out.println("API key set.");
     }
 
     private static void getConnections() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         try {
             String connections = VaultNAPI.getConnections();
             System.out.println("Connections: " + connections);
@@ -142,6 +159,11 @@ public class CLI {
     }
 
     private static void listCertificates() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         try {
             String certificates = VaultNAPI.listCertificates();
             System.out.println("Certificates: " + certificates);
@@ -151,9 +173,14 @@ public class CLI {
     }
 
     private static void deleteCertificate() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter certificate ID to delete: ");
+        System.out.print("Enter certificate ID to delete: ");
         String certId = scanner.nextLine().trim();
 
         try {
@@ -165,9 +192,14 @@ public class CLI {
     }
 
     private static void validateCertificate() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter certificate ID to validate: ");
+        System.out.print("Enter certificate ID to validate: ");
         String certId = scanner.nextLine().trim();
 
         try {
@@ -179,9 +211,14 @@ public class CLI {
     }
 
     private static void getCertificateInfo() {
+        if (apiKey.isEmpty()) {
+            System.out.println("Please enter your API key first.");
+            enterApiKey();
+        }
+
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter certificate ID to get information: ");
+        System.out.print("Enter certificate ID to get information: ");
         String certId = scanner.nextLine().trim();
 
         try {
@@ -197,9 +234,9 @@ public class CLI {
         System.out.println("This application is for testing certificate generation, uploading, and testing the VaultN API implementation.");
         System.out.println("Commands:");
         System.out.println("1. Generate Certificate: Generates a new certificate and stores it in a keystore.");
-        System.out.println("2. Enter API Key: Prompts you to enter your VaultN API key.");
-        System.out.println("3. Export Certificate: Exports the generated certificate to a specified file path.");
-        System.out.println("4. Upload Certificate: Uploads the exported certificate to the VaultN API.");
+        System.out.println("2. Export Certificate: Exports the generated certificate to a specified file path.");
+        System.out.println("3. Upload Certificate: Uploads the exported certificate to the VaultN API.");
+        System.out.println("4. Enter API Key: Prompts you to enter your VaultN API key.");
         System.out.println("5. Get Connections: Retrieves and displays your VaultN connections using the API key.");
         System.out.println("6. List Certificates: Lists all certificates available in VaultN.");
         System.out.println("7. Delete Certificate: Deletes a specific certificate from VaultN.");

@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f77e9430-c34a-47d3-98ef-b8fda48f6b60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/keystore.jks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample.crt" beforeDir="false" afterPath="$PROJECT_DIR$/sample.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keystore.jks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.crt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/tillrd/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/CLI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +96,7 @@
       <workItem from="1718451612176" duration="334000" />
       <workItem from="1718451987549" duration="1957000" />
       <workItem from="1718454346433" duration="592000" />
-      <workItem from="1718455173317" duration="439000" />
+      <workItem from="1718455173317" duration="4080000" />
     </task>
     <servers />
   </component>
