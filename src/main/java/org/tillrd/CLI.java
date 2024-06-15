@@ -8,52 +8,72 @@ public class CLI {
         Scanner scanner = new Scanner(System.in);
         String command;
 
-        System.out.println("\nVaultN CLI Application");
+        System.out.println("\n");
+        System.out.println(" \\ \\    / /        | | | | \\ | |       / ____| |    |_   _|");
+        System.out.println("  \\ \\  / /_ _ _   _| | |_|  \\| |______| |    | |      | |  ");
+        System.out.println("   \\ \\/ / _` | | | | | __| . ` |______| |    | |      | |  ");
+        System.out.println("    \\  / (_| | |_| | | |_| |\\  |      | |____| |____ _| |_ ");
+        System.out.println("     \\/ \\__,_|\\__,_|_|\\__|_| \\_|       \\_____|______|_____|");
+        System.out.println("                                                            ");
+        System.out.println("                                                           ");
+        System.out.println("VaultN CLI Application");
         System.out.println("Made by Richard Tillard");
         System.out.println("Version 1.0");
 
         do {
-            System.out.println("\nEnter command (generate-certificate, export-certificate, upload-certificate, enter-api-key, get-connections, list-certificates, delete-certificate, validate-certificate, get-certificate-info, help, exit): ");
+            System.out.println("\nMenu:");
+            System.out.println("1. Generate Certificate");
+            System.out.println("2. Export Certificate");
+            System.out.println("3. Upload Certificate");
+            System.out.println("4. Enter API Key");
+            System.out.println("5. Get Connections");
+            System.out.println("6. List Certificates");
+            System.out.println("7. Delete Certificate");
+            System.out.println("8. Validate Certificate");
+            System.out.println("9. Get Certificate Info");
+            System.out.println("10. Help");
+            System.out.println("11. Exit");
+            System.out.println("\nEnter your choice (1-11): ");
             command = scanner.nextLine().trim();
 
             switch (command) {
-                case "generate-certificate":
+                case "1":
                     generateCertificate();
                     break;
-                case "export-certificate":
+                case "2":
                     exportCertificate();
                     break;
-                case "upload-certificate":
+                case "3":
                     uploadCertificate();
                     break;
-                case "enter-api-key":
+                case "4":
                     enterApiKey();
                     break;
-                case "get-connections":
+                case "5":
                     getConnections();
                     break;
-                case "list-certificates":
+                case "6":
                     listCertificates();
                     break;
-                case "delete-certificate":
+                case "7":
                     deleteCertificate();
                     break;
-                case "validate-certificate":
+                case "8":
                     validateCertificate();
                     break;
-                case "get-certificate-info":
+                case "9":
                     getCertificateInfo();
                     break;
-                case "help":
+                case "10":
                     displayHelp();
                     break;
-                case "exit":
+                case "11":
                     System.out.println("Exiting application.");
                     break;
                 default:
-                    System.out.println("Invalid command. Type 'help' for a list of commands.");
+                    System.out.println("Invalid choice. Type '10' for help.");
             }
-        } while (!command.equals("exit"));
+        } while (!command.equals("11"));
     }
 
     private static void generateCertificate() {

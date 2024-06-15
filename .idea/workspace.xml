@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f77e9430-c34a-47d3-98ef-b8fda48f6b60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VaultNApp.dir/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VaultNApp.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VaultNApp.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.VaultNApp.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/CLI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/CheckCertificate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/VaultNAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/VaultNAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CLITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keystore.jks" beforeDir="false" afterPath="$PROJECT_DIR$/keystore.jks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.crt" beforeDir="false" afterPath="$PROJECT_DIR$/sample.crt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/tillrd/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/tillrd/CLI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +40,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/richard/Library/Mobile Documents/com~apple~CloudDocs/Developer/VaultN/VaultNCLI&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/richard/Library/Mobile Documents/com~apple~CloudDocs/Developer/VaultN/VaultN-CLI/src/main/java/org/tillrd&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/richard/Library/Mobile Documents/com~apple~CloudDocs/Developer/VaultN/VaultN-CLI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -105,6 +94,8 @@
       <workItem from="1718446757584" duration="4788000" />
       <workItem from="1718451612176" duration="334000" />
       <workItem from="1718451987549" duration="1957000" />
+      <workItem from="1718454346433" duration="592000" />
+      <workItem from="1718455173317" duration="439000" />
     </task>
     <servers />
   </component>
