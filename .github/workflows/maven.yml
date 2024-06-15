@@ -19,17 +19,33 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+      security-events: write
+
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+        
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+    - name: Install dependencies
+      run: mvn install -DskipTests
+
+    - name: Run tests
+      run: mvn test
+
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
