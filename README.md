@@ -5,6 +5,7 @@
     \  / (_| | |_| | | |_| |\  |      | |____| |____ _| |_ 
      \/ \__,_|\__,_|_|\__|_| \_|       \_____|______|_____|
 ```
+[![Java CI with Maven](https://github.com/tillrd/VaultN-CLI/actions/workflows/maven.yml/badge.svg)](https://github.com/tillrd/VaultN-CLI/actions/workflows/maven.yml)
 
 ## Description
 
